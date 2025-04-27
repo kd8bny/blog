@@ -1,0 +1,3 @@
+[submodule "blog-kd8bny/themes/terminal"]
+	path = blog-kd8bny/themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
