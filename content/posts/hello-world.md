@@ -7,8 +7,12 @@ author = ""
 cover = ""
 tags = ["", ""]
 keywords = ["", ""]
-description = ""
+description = "me learning hugo"
 showFullContent = false
 readingTime = false
 hideComments = false
 +++
+
+# Hello World!
+This is the home of my new blog. Take 3 at this kind of thing.
+
