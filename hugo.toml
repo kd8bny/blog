@@ -1,5 +1,4 @@
-baseURL = 'https://blog-dyp.pages.dev/'
-#baseURL = 'https://blog.kd8bny.com/'
+baseURL = 'https://blog.kd8bny.com/'
 languageCode = 'en-us'
 title = 'Blog'
 theme = 'terminal'
