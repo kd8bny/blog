@@ -1,4 +1,4 @@
-baseURL = 'https://blog.kd8bny.com/'
+baseURL = 'https://kd8bny.com/'
 languageCode = 'en-us'
 
 theme = 'terminal'
@@ -22,10 +22,10 @@ pagination.pagerSize = 5
   showLanguageSelector = false
 
   # set theme to full screen width
-  fullWidthTheme = false
+  fullWidthTheme = true
 
   # center theme with default width
-  centerTheme = false
+  centerTheme = true
 
   # if your resource directory contains an image called `cover.(jpg|png|webp)`,
   # then the file will be used as a cover automatically.
@@ -40,11 +40,12 @@ pagination.pagerSize = 5
   # updatedDatePrefix = "Updated"
 
   # whether to show a page's estimated reading time
-  # readingTime = false # default
+  readingTime = true  #false default
 
   # whether to show a table of contents
   # can be overridden in a page's front-matter
   # Toc = false # default
+  Toc = true
 
   # set title for the table of contents
   # can be overridden in a page's front-matter
@@ -65,12 +66,12 @@ pagination.pagerSize = 5
   # dateFormat = "2006-01-02 3:04:06 PM MST"
 
 
-[params.twitter]
-  # set Twitter handles for Twitter cards
-  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
-  creator = ""
-  site = ""
+#[params.twitter]
+#  # set Twitter handles for Twitter cards
+#  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+#  # do not include @
+#  creator = ""
+#  site = ""
 
 [languages]
   [languages.en]
@@ -93,7 +94,7 @@ pagination.pagerSize = 5
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "Blog"
+        logoText = "kd8bny.com"
         logoHomeLink = "/"
 
       [languages.en.menu]
@@ -105,6 +106,11 @@ pagination.pagerSize = 5
           identifier = "Projects"
           name = "Projects"
           url = "/projects"
+        [[languages.en.menu.main]]
+          identifier = "Bar"
+          name = "Behind the Bar"
+          url = "/bar"
+
 
 #[module]
 #  # In case you would like to make changes to the theme and keep it locally in you repository,
