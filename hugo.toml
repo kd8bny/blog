@@ -84,6 +84,9 @@ missingBackButtonLabel = "Back to home page"
 minuteReadingTime = "min read"
 words = "words"
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [languages.en.params.logo]
 logoText = "~/kd8bny"
 logoHomeLink = "/"
