@@ -4,6 +4,11 @@ languageCode = 'en-us'
 # Allow search engine indexing
 enableRobotsTXT = true
 
+# Enable disqus comments
+[services]
+[services.disqus]
+shortname = 'kd8bny-com'
+
 theme = 'terminal'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.

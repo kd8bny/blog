@@ -72,3 +72,5 @@ We can now step through this process in our workflow, issue a `block` followed b
 Well hope you found this useful or more than you needed to know.
 
 -daryl
+
+{{ template "_internal/disqus.html" . }}
