@@ -5,9 +5,7 @@ languageCode = 'en-us'
 enableRobotsTXT = true
 
 # Enable disqus comments
-[services]
-[services.disqus]
-shortname = 'kd8bny-com'
+disqusShortname  = 'kd8bny-com'
 
 theme = 'terminal'
 # Add it only if you keep the theme in the `themes` directory.
