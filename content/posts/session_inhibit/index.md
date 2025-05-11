@@ -73,4 +73,3 @@ Well hope you found this useful or more than you needed to know.
 
 -daryl
 
-{{ template "_internal/disqus.html" . }}
