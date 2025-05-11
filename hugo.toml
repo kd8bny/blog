@@ -1,6 +1,9 @@
 baseURL = 'https://kd8bny.com/'
 languageCode = 'en-us'
 
+# Allow search engine indexing
+enableRobotsTXT = true
+
 theme = 'terminal'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
