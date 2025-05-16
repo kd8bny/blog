@@ -45,6 +45,8 @@ alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz
 alias unblock='kill -SIGKILL $INHIBIT_PID'
 ```
 
+**NOTE:** I Updated the alias as documented in this post [Errata systemd-inhibit sessions](../session_inhibit2.md)
+
 ## k cool what does this do
 
 Well since we aren't hand jamming the command each time we want to inhibit the power policy, we can take advantage of some niceties the cli provides.
@@ -72,4 +74,3 @@ We can now step through this process in our workflow, issue a `block` followed b
 Well hope you found this useful or more than you needed to know.
 
 -daryl
-
