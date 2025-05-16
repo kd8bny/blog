@@ -34,7 +34,7 @@ alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz
 - `watch` - watch - "execute a program periodically, showing output fullscreen"
   - `--interval` - update every 240 sec
 - `head` - output the first part of files
-- `/dev/random` - system entropy used for
+- `/dev/random` - system entropy used for keys and other randomness
 
 The concept is to read the first few lines of `/dev/random` every 340 sec. We could do something like `cat /dev/random` but i felt that was uncessary overhead for just keeping a process alive.
 
