@@ -36,7 +36,7 @@ alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz
 - `head` - output the first part of files
 - `/dev/random` - system entropy used for keys and other randomness
 
-The concept is to read the first few lines of `/dev/random` every 340 sec. We could do something like `cat /dev/random` but i felt that was uncessary overhead for just keeping a process alive.
+The concept is to read the first few lines of `/dev/random` every 240 sec. We could do something like `cat /dev/random` but i felt that was unnecessary overhead for just keeping a process alive.
 
 *Note:* `/dev/urandom` is perfectly fine too for our use.
 
@@ -46,7 +46,7 @@ Now we also make a minor improvement in our unblock alias. After some considerat
 alias unblock='kill -SIGKILL $INHIBIT_PID; INHIBIT_PID='
 ```
 
-Boom! toss that in your .*rc file and call it a night!
+Boom! Toss that in your .*rc file and call it a night!
 
 ## What about
 
