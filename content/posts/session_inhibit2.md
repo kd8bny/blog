@@ -1,5 +1,5 @@
 +++
-title = "Errata systemd-inhibit sessions"
+title = "Errata: Keeping sessions alive with systemd-inhibit"
 date = "2025-05-14T21:05:13-05:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "daryl"
@@ -13,7 +13,7 @@ hideComments = false
 +++
 ## What's broke
 
-After using the inhibit solution I posted about [Keeping sessions alive with systemd-inhibit](session_inhibit/index.md) I noticed a couple quirks. If the ssh session exists the inhibit is removed, leaving the system to suspend once again. After thinking about it for a bit this makes sense. Since the login process starts your shell of choice, anything within that session will exit once the ssh session ends. When this happens our background sh process exits too.
+After using the inhibit solution I posted about [Keeping sessions alive with systemd-inhibit](/posts/session_inhibit/) I noticed a couple quirks. If the ssh session exists the inhibit is removed, leaving the system to suspend once again. After thinking about it for a bit this makes sense. Since the login process starts your shell of choice, anything within that session will exit once the ssh session ends. When this happens our background sh process exits too.
 
 *Now we can debate is this a bug or a feature?*
 
@@ -36,7 +36,7 @@ alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz
 - `head` - output the first part of files
 - `/dev/random` - system entropy used for keys and other randomness
 
-The concept is to read the first few lines of `/dev/random` every 240 sec. We could do something like `cat /dev/random` but i felt that was unnecessary overhead for just keeping a process alive.
+The concept is to read the first few lines of `/dev/random` every 240 sec keeping us periodic and lightweight. We could do something like `cat /dev/random` but I felt that was unnecessary overhead for just keeping a process alive.
 
 *Note:* `/dev/urandom` is perfectly fine too for our use.
 

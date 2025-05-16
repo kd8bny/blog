@@ -45,7 +45,7 @@ alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz
 alias unblock='kill -SIGKILL $INHIBIT_PID'
 ```
 
-**NOTE:** I Updated the alias as documented in this post [Errata systemd-inhibit sessions](../session_inhibit2.md)
+**NOTE:** I Updated the alias as documented in this post [Errata: Keeping sessions alive with systemd-inhibit](/posts/session_inhibit2)
 
 ## k cool what does this do
 
