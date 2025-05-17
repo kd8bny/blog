@@ -5,7 +5,7 @@ languageCode = 'en-us'
 enableRobotsTXT = true
 
 # Enable disqus comments
-disqusShortname  = 'kd8bny-com'
+disqusShortname = 'kd8bny-com'
 
 theme = 'terminal'
 # Add it only if you keep the theme in the `themes` directory.
@@ -99,20 +99,20 @@ logoHomeLink = "/"
 
 [languages.en.menu]
 [[languages.en.menu.main]]
-identifier = "Posts"
-name = "Posts"
+identifier = "blog"
+name = "blog"
 url = "/posts"
 weight = 10
 [[languages.en.menu.main]]
 identifier = "Bar"
-name = "Behind the Bar"
+name = "The Bar"
 url = "/bar"
 weight = 20
-# [[languages.en.menu.main]]
-# identifier = "about"
-# name = "About"
-# url = "/about"
-# weight = 30
+[[languages.en.menu.main]]
+identifier = "whoami"
+name = "whoami"
+url = "/whoami"
+weight = 30
 [[languages.en.menu.main]]
 identifier = "rss"
 name = "RSS"
