@@ -105,7 +105,7 @@ url = "/posts"
 weight = 10
 [[languages.en.menu.main]]
 identifier = "Bar"
-name = "The Bar"
+name = "the_bar"
 url = "/bar"
 weight = 20
 [[languages.en.menu.main]]
