@@ -23,8 +23,8 @@ An frankly leaving it alone is boring so let's fix it.
 
 ## The fix
 
-In order to our change to work `sh` isn't going to be the correct choice anymore. We have no way of enforcing `sh` stay alive on exit. A common solution to this problem is using `nohup` or No Hangup. This however in my testing doesn't work for with sh as redirecting input and output to the inactive shell wont keep it running.
-So I devised a new plan hopefully with the similar compatibility of `sh&`. **The Requirements:** We need a long running process that never exits, can't suck too many resources, and needs to be easy to kill. So lets slap a few things together and see how they work.
+In order to our change to work `sh` isn't going to be the correct choice anymore. We have no way of enforcing `sh` stay alive on exit. A common solution to this problem is using `nohup` or No Hangup. This however in my testing doesn't work for with sh as redirecting input and output to the inactive shell won't keep it running.
+So I devised a new plan hopefully with the similar compatibility of `sh&`. **The Requirements:** We need a long-running process that never exits, can't suck too many resources, and needs to be easy to kill. So lets slap a few things together and see how they work.
 
 ```sh
 alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz I said so" nohup watch --interval 240 head /dev/random &; export INHIBIT_PID=$!'
@@ -50,6 +50,6 @@ Boom! Toss that in your .*rc file and call it a night!
 
 ## What about
 
-So couldn't I just use something like [caffeine](https://github.com/pkage/caffeine) instead of all that bash. Yes, yes you can.
+You may wonder, so couldn't I just use something like [caffeine](https://github.com/pkage/caffeine) instead of all that bash. Yes, yes you can.
 
 -daryl

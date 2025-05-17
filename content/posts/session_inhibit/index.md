@@ -6,14 +6,14 @@ author = "daryl"
 cover = ""
 tags = ["linux", "systemd", "bash", "ssh", "inhibit"]
 keywords = ["linux", "systemd", "bash", "ssh", "inhibit"]
-description = ""
+description = "Lets learn how to use systemd-inhibit to block systems idle states."
 showFullContent = false
 readingTime = true
 hideComments = false
 +++
-In my homelab network I use my desktop for most of my development. Since its a desktop and not a server it abides by the power policy setting I have selected. This works great unless I'm working a remote session from anything else such as my laptop, cell, etc.
+In my homelab network I use my desktop for most of my development. Since it's a desktop and not a server it abides by the power policy setting I have selected. This works great unless I'm working a remote session from anything else such as my laptop, cell, etc.
 
-My usual workflow is just an ssh session with tmux, where I wake up the system by issuing a Wake on LAN (wol) from an always on server. After the typical timeout around 30 mins the system goes to sleep which drops the session and forces me to to send another wol and reconnect via ssh and then reattach to tmux.
+My usual workflow is just an ssh session with tmux, where I wake up the system by issuing a Wake on LAN (wol) from an always on server. After the typical timeout around 30 mins the system goes to sleep which drops the session and forces me to send another wol and reconnect via ssh and then reattach to tmux.
 
 ![systemd-inhibit-list](power_off.png)
 
@@ -34,7 +34,7 @@ On systemd enabled systems the blocking of suspend/sleep actions can be controll
 >
 > …
 
-So basically the inhibit action will block sleep until the chosen executable exits. Although useful, I find this to be cumbersome thinking ahead; what do I want to run, should it be blocking, or is it long running enough for what I want to do. I need something more flexible.
+So basically the inhibit action will block sleep until the chosen executable exits. Although useful, I find this to be cumbersome thinking ahead; what do I want to run, should it be blocking, or is it long-running enough for what I want to do. I need something more flexible.
 
 ## Lets make it happen
 
@@ -57,15 +57,15 @@ Well since we aren't hand jamming the command each time we want to inhibit the p
 - `why` - a mildly descriptive reason for the block
 - `sh&` - and finally our command.
 
-We need a long running process that doesn't exit. For general compatibility I thought sh was a wise choice as it's pretty much guaranteed to exist. We also background this process so it doesn't bug us and take up a active TTY.
+We need a long-running process that doesn't exit. For general compatibility I thought sh was a wise choice as it's pretty much guaranteed to exist. We also background this process, so it doesn't bug us and take up an active TTY.
 
 After the command is run we nab the PID of the inhibit process by using `$!`, allowing us we can recall it later as `INHIBIT_PID`
 
-We can validate the inhibit is active using `systemd-inhibit --list`
+We can validate the process is actively inhibiting using `systemd-inhibit --list`
 
 ![systemd-inhibit-list](inhibit_list.png)
 
-When we wrap up our session and would like the system to sleep again the second alias can be used to kill our captured PID. Here we use a KILL signal instead of a terminate or another polite signal because the process is background without input and therefore is suspended. A suspended process cannot exit unless it's running. Since we don't really care about data-loss (because the process isn't doing anything aside from existing) a KILL is fine.
+When we wrap up our session and would like the system to sleep again the second alias can be used to kill our captured PID. Here we use a KILL signal instead of TERMINATE or another polite signal because the process is background without input and therefore is suspended. A suspended process cannot exit unless it's running. Since we don't really care about data-loss (because the process isn't doing anything aside from existing) a KILL is fine.
 
 We can now step through this process in our workflow, issue a `block` followed by an `unblock` wrapping up our session.
 
