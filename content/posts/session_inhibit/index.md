@@ -99,4 +99,3 @@ Well hope you found this useful or more than you needed to know.
 You may wonder, so couldn't I just use something like [caffeine](https://github.com/pkage/caffeine) instead of all that bash. Yes, yes you can.
 
 -daryl
-
