@@ -3,7 +3,7 @@ title = "Keeping sessions alive with systemd-inhibit"
 date = "2025-05-10T21:59:34-05:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "daryl"
-cover = "cover.png"
+cover = ""
 tags = ["linux", "systemd", "bash", "ssh", "inhibit"]
 keywords = ["linux", "systemd", "bash", "ssh", "inhibit"]
 description = "Lets learn how to use systemd-inhibit to block systems idle states."
@@ -45,6 +45,7 @@ systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz I said so" s
 ```
 
 ## k cool what does this do
+
 ### Set the block
 
 Since we aren't hand jamming the command each time we want to inhibit the power policy, we can take advantage of some niceties the cli provides.
@@ -74,7 +75,7 @@ kill -SIGKILL $INHIBIT_PID; INHIBIT_PID=
 
 ## Add a little QoL
 
-Using bash aliases we can make this a little more straight forward for the workflow. Place these 2 lines in your `.bashrc`, `.zshrc` etc etc.
+Using bash aliases we can make this a little more straight forward for the workflow. Place these 2 lines in your `.bashrc`, `.zshrc` etc. etc.
 
 ```sh
 alias block='systemd-inhibit --no-ask-password --what=idle --who="me" --why="cuz I said so" sh & disown; export INHIBIT_PID=$!'
