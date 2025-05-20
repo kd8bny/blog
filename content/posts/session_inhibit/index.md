@@ -21,7 +21,7 @@ My usual workflow is just an ssh session with tmux, where I wake up the system b
 
 ## So what
 
-On systemd enabled systems the blocking of suspend/sleep actions can be controlled by `systemd-inhibit. Usually when you block sleep from the desktop environment it's using this same mechanism under the hood. So, what does it do?
+On systemd enabled systems the blocking of suspend/sleep actions can be controlled by `systemd-inhibit`. Usually when you block sleep from the desktop environment it's using this same mechanism under the hood. So, what does it do?
 
 > Let us rtfm
 >
