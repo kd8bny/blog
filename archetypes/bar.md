@@ -10,3 +10,14 @@ showFullContent = false
 readingTime = true
 hideComments = false
 +++
+
+## Recipe
+
+## Instructions
+
+### Optional
+
+## Daryl's opinion
+
+## Story
+

@@ -3,6 +3,7 @@ title = "whoami"
 date = "2025-05-17T15:04:10-05:00"
 author = "daryl"
 hideComments = true
+framed = true
 +++
 Welcome! 
 
