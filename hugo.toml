@@ -20,6 +20,7 @@ noClasses = false
 # dir name of your main content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "posts"
+missingContentMessage = "test404"
 
 # if you set this to 0, only submenu trigger will be visible
 showMenuItems = 3
@@ -69,6 +70,7 @@ Toc = false # default
 # dateFormat = "2006-01-02"
 # Example format, with date, time, and timezone abbreviation:
 # dateFormat = "2006-01-02 3:04:06 PM MST"
+
 
 [languages]
 [languages.en]
