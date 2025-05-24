@@ -20,7 +20,6 @@ noClasses = false
 # dir name of your main content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "posts"
-missingContentMessage = "test404"
 
 # if you set this to 0, only submenu trigger will be visible
 showMenuItems = 3
