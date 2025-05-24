@@ -22,8 +22,8 @@ My favorite riff of the classic daiquiri.
 
 ## Instructions
 
-1. Combine ingredients into a shaker
-2. Strain and pour
+1. Combine ingredients into a shaker over ice
+2. Shake and Strain
 3. Enjoy
 
 ## Daryl's opinion
