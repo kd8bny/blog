@@ -13,7 +13,14 @@ hideComments = false
 
 ## Recipe
 
+- 0.25oz (bar spoon)
+- 3 dash
+- 3oz (90ml)
+
 ## Instructions
+
+1.
+2. Enjoy
 
 ### Optional
 
