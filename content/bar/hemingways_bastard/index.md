@@ -11,8 +11,7 @@ readingTime = true
 hideComments = false
 +++
 
-My favorite riff of the classic daiquiri. Often a go-to of mine for a gin base.
-
+My favorite riff of the classic daiquiri. 
 ## Recipe
 
 - 2oz (60mL) Rum
