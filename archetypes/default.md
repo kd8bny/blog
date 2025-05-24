@@ -11,3 +11,5 @@ showFullContent = false
 readingTime = true
 hideComments = false
 +++
+
+-daryl
