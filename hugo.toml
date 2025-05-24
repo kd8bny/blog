@@ -115,6 +115,10 @@ name = "whoami"
 url = "/whoami"
 weight = 30
 [[languages.en.menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags"
+[[languages.en.menu.main]]
 identifier = "rss"
 name = "RSS"
 url = "https://kd8bny.com/index.xml"
