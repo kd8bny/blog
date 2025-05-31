@@ -80,7 +80,7 @@ title = "~/kd8bny"
 subtitle = "A blog about things and stuff"
 owner = "daryl - kd8bny"
 keywords = ""
-copyright = "Daryl Bennett"
+copyright = "2025 Daryl Bennett All rights reserved"
 menuMore = "Show more"
 readMore = "Read more"
 readOtherPosts = "Read other posts"
@@ -90,6 +90,10 @@ missingContentMessage = "Page not found..."
 missingBackButtonLabel = "Back to home page"
 minuteReadingTime = "min read"
 words = "words"
+
+[Author]
+name = "Daryl Bennett"
+email = "blog@kd8bny.com"
 
 [markup.goldmark.renderer]
 unsafe = true
