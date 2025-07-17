@@ -4,9 +4,6 @@ languageCode = 'en-us'
 # Allow search engine indexing
 enableRobotsTXT = true
 
-# Enable disqus comments
-disqusShortname = 'kd8bny-com'
-
 theme = 'terminal'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -126,6 +123,19 @@ url = "/tags"
 identifier = "rss"
 name = "RSS"
 url = "https://kd8bny.com/index.xml"
+
+[params.giscus]
+repo = "kd8bny/blog"
+repoID = "R_kgDOGzJrfg"
+category = "Comments"
+categoryID = "DIC_kwDOGzJrfs4CP2TM"
+mapping = "og:title"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+theme = "dark"
+lang = "en"
+loading = "lazy"
 
 # [module]
 #  # In case you would like to make changes to the theme and keep it locally in you repository,
