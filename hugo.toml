@@ -126,14 +126,14 @@ url = "https://kd8bny.com/index.xml"
 
 [params.giscus]
 repo = "kd8bny/blog"
-repoID = "R_kgDOGzJrfg"
+repoID = "R_kgDOOgs1Gg"
 category = "Comments"
-categoryID = "DIC_kwDOGzJrfs4CP2TM"
-mapping = "og:title"
+categoryID = "DIC_kwDOOgs1Gs4CtDhP"
+mapping = "pathname"
 reactionsEnabled = "1"
 emitMetadata = "0"
-inputPosition = "bottom"
-theme = "dark"
+inputPosition = "top"
+theme = "preferred_color_scheme"
 lang = "en"
 loading = "lazy"
 
@@ -144,3 +144,4 @@ loading = "lazy"
 #  # replacements = "github.com/panr/hugo-theme-terminal/v4 -> themes/terminal"
 # [[module.imports]]
 # path = 'github.com/panr/hugo-theme-terminal/v4'
+
